@@ -3,6 +3,7 @@ package ex84;
 import javax.swing.JOptionPane;
 public class Ex84{
     public static void main(String[] args){
+        //Algoritmo que verifica se um número inteiro é PAR ou ÍMPAR
 	int a,escolha;//Variável utilizada
         escolha=Integer.parseInt(JOptionPane.showInputDialog("(1) Para rodar a "
                 + "versão com if/else\n(2) Para rodar a versão com switch"));
