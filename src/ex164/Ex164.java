@@ -11,7 +11,7 @@ public class Ex164{
             option=Integer.parseInt(JOptionPane.showInputDialog("Até quanto?"));
             if(option<=0) {
                 JOptionPane.showMessageDialog(null,"Nao permitido");
-                return;
+                System.exit(0);
             }
             System.out.println("Começou...");
             for(int counter=1;counter<=option;counter++){
@@ -27,7 +27,7 @@ public class Ex164{
             switch(Boolean.toString(option<=0)) {
                 case "true":
                     JOptionPane.showMessageDialog(null,"Nao permitido");
-                    return;
+                    System.exit(0);
             }
             System.out.println("Começou...");
             for(int counter=1;counter<=option;counter++){

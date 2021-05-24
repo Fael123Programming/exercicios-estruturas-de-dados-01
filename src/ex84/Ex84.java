@@ -9,7 +9,6 @@ public class Ex84{
                 + "versão com if/else\n(2) Para rodar a versão com switch"));
         if(escolha==1){
             a=Integer.parseInt(JOptionPane.showInputDialog("Digite numero"));//Pegando um número do usuário e o convertendo para tipo inteiro
-
             //Versão com if/else
             if(a % 2 == 0) JOptionPane.showMessageDialog(null,"PAR");//Se o resultado de sua divisão módulo por 2 for igual a zero, o mesmo número é par 
             else JOptionPane.showMessageDialog(null,"IMPAR");//Se não for, ele é ímpar

@@ -31,7 +31,7 @@ public class Ex121{
                     for(int subcounter:vector){//Percorrendo o vetor vector para sabermos se algum dado está repetido.
                         if(subcounter==n1&&subcounter!=0||zeros==2) {//Se houver algum,encerramos nosso programa imediatamente.
                             JOptionPane.showMessageDialog(null,"Os valores devem ser diferentes"); 
-                            return;
+                            System.exit(0);
                         }
                     }
                 }
