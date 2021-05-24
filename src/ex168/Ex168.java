@@ -11,7 +11,7 @@ public class Ex168 {
         for(int line=1;line<=10;line++){
             for(int column=1;column<=10;column++){
                 if(escolha){
-                    if(line==column)System.out.print(line+"-"+column);
+                    if(line==column) System.out.print(line+"-"+column);
                 }else{
                     switch(Boolean.toString(line==column)){
                         case "true":

@@ -13,7 +13,7 @@ public class Ex166 {
             for(int column=1;column<=10;column++){
                 if(escolha){
                     if(column==10) System.out.println(line+"-"+column+"\n");
-                    else System.out.print(line+"-"+column+"\t");
+                    else System.out.print(line+"-"+column+"\t");                    
                 }else{
                     switch(column){
                         case 10:
