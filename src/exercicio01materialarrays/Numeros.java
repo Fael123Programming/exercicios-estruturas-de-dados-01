@@ -61,4 +61,24 @@ public class Numeros {
                 break;
         }
     }
-}
+}/*
+            int opcao=Integer.parseInt(JOptionPane.showInputDialog("(1) Para utilizar"
+                + " o comando FOR\n(2) Para utilizar o comando WHILE\n(3) Para "
+                + "utilizar o comando DO/WHILE"));
+            switch(opcao){
+                case 1:
+                    //Usando Laço FOR
+                
+                    break;
+                case 2:
+                    //Usando Laço WHILE
+                
+                    break;
+                case 3:
+                    //Usando Laço DO/WHILE
+                
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null,"Opcao invalida");
+                    break;
+            }*/
