@@ -1,13 +1,9 @@
 package ex400;
-
 public class Quarto {
     private int leitos;
     private float precoDiaria;//preço pela diária (preço total será precoDiaria*diarias) 
     private String situacao;//alugado,livre ou reservado
-    private String dataDeEntrada;
-    private String dataDeSaida;
     private String codigo;
-    private int diarias;
     
     public Quarto(int lts,float pd){
         this.leitos=lts;
@@ -15,11 +11,17 @@ public class Quarto {
         this.situacao="livre";
     }
     
+    public int getLeitos(){return this.leitos;}
+    
+    public float getPrecoDiaria(){return this.precoDiaria;}
+    
     public String getSituacao(){return this.situacao;}
     
-    public void setCodigoQuarto(char simbolo,int numero){
-        this.codigo=Character.toString(simbolo)+Integer.toString(numero);
-    }
+    public String getCodigo(){return this.codigo;}
+    
+    public void setCodigoQuarto(char simbolo,int numero){this.codigo=Character.toString(simbolo)+Integer.toString(numero);}
+    
+    public void setSituacao(String situacao){this.situacao=situacao;}
     
     @Override
     public String toString(){
