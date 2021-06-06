@@ -1,7 +1,7 @@
 package ex356;
 
 import javax.swing.JOptionPane;
-public class Ex356 {
+public class Ex356{
     /*Algoritmo que armazena os nomes e notas de 2 provas de 15 alunos.
     Calcula e armazena a média arredondada. Armazena,também,a situação
     de cada aluno: aprovado (AP) ou reprovado (RP). Ao final,imprime
@@ -9,7 +9,6 @@ public class Ex356 {
     public static void main(String[] args){
         int quantidadeDeAlunosDaSala=5;
         SalaDeAula novaSala=new SalaDeAula(quantidadeDeAlunosDaSala);
-        System.out.println("<<<<< CALCULO DE NOTAS: PROVAS 1 E 2 <<<<<");
         String nome;
         float notaProva01,notaProva02;
         int opcao=Integer.parseInt(JOptionPane.showInputDialog("(1) Para utilizar"

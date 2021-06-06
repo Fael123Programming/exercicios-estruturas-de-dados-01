@@ -8,7 +8,7 @@ public class Ex400 {
         byte opcao=Byte.parseByte(JOptionPane.showInputDialog("(1) Para utilizar"
                 + " o comando FOR\n(2) Para utilizar o comando WHILE\n(3) Para "
                 + "utilizar o comando DO/WHILE")),escolha;
-        Hotel hotelFazendaSucesso= new Hotel(50);//50 quartos
+        Hotel hotelFazendaSucesso= new Hotel(5);//50 quartos
         escolha=menu("Hotel-Fazenda Sucesso\n1. Cadastrar quarto\n"
                             + "2. Listar todos os quartos\n3. Listar quartos"
                             + " ocupados\n4. Alugar/reservar quarto\n5. Regis"

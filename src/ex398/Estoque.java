@@ -1,6 +1,6 @@
 package ex398;
 
-public class Estoque {
+class Estoque {
     private Produto produtos[];
     private int quantidadeProdutosAdicionados=0;
     /*Além de ter quantos produtos já foram adicionados,produtosEmEstoque

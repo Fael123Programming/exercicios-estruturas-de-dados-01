@@ -1,8 +1,6 @@
 package exercicio01materiallacosderepeticao;
-
 import javax.swing.JOptionPane;
-
-public class Main {
+public class Main{
     public static void main(String[] args){
         int opcao=Integer.parseInt(JOptionPane.showInputDialog("(1) Para utilizar"
                 + " o comando FOR\n(2) Para utilizar o comando WHILE\n(3) Para "

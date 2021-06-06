@@ -21,7 +21,7 @@ public class SalaDeAula {
     
     public void mostrarInformacoesDosAlunos(){
         if(this.quantidadeDeAlunosInseridos>0){
-            System.out.printf("%-50s%-20s%-20s%-20s%10s%n","NOME","NOTA PROVA 01","NOTA PROVA 02","MEDIA","SITUACAO");
+            System.out.println("<<<<<<<<<< Informacoes sobre os alunos >>>>>>>>>>");
             for(byte counter=0;counter<this.quantidadeDeAlunosInseridos;counter++)
                 System.out.println(this.alunos[counter]);
         }else{System.out.println("Sem alunos inseridos!");}

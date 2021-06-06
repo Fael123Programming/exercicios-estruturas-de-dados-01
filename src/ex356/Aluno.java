@@ -23,7 +23,8 @@ public class Aluno {
     
     @Override
     public String toString(){
-        return String.format("%-50s%-20.2f%-20.2f%-20.2f%10s",this.nome,this.notaProva01,
+        return String.format("Nome: %s     Nota prova 1: %.2f     Nota prova 2: %.2f"
+                + "     Media: %.2f     Situacao: %s",this.nome,this.notaProva01,
                 this.notaProva02,this.media,this.situacao);
     }
     
