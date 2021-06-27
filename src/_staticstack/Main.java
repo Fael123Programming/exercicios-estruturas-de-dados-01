@@ -1,4 +1,4 @@
-package staticstack;
+package _staticstack;
 public class Main {
     public static void main(String[] args){
         Stack stackOfNumbers=new Stack(2);

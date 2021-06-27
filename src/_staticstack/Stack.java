@@ -1,4 +1,4 @@
-package staticstack;
+package _staticstack;
 public class Stack{
     private int[]data;
     private int top;
