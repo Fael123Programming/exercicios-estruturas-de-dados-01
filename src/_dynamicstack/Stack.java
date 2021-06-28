@@ -20,7 +20,6 @@ public class Stack {
     }
     
     public Node top(){
-        if(this.isEmpty()) return null;
         return this.top;
     }
     
