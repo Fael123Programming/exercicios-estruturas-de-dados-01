@@ -61,7 +61,7 @@ public class Car implements Comparable<Car>{
     @Override
     public String toString(){
         return String.format("##### Marca: %s     Modelo: %s     Cor: %s     "
-                + "Identificacao: %d     Dono: %s ########",
+                + "Identificacao: %d     Dono(a): %s ########",
         this.brand,this.model,this.color,this.identification,this.owner);
     }
     
