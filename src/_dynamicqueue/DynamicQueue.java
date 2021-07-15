@@ -26,11 +26,12 @@ public class DynamicQueue{
         return true;
     }
     
+    /* Queues doesn't have a method that removes an element from a different position than the first.
     public boolean remove(int position){
         if(this.isEmpty() || position<0 || this.size()-1<position) return false;
         this.objects.remove(position);
         return true;
-    }
+    }*/
     
     public Object peek(){
         if(this.isEmpty()) return null;
