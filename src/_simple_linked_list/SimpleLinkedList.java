@@ -1,5 +1,5 @@
-package _SimpleLinkedlist;
-public class LinkedList {
+package _simple_linked_list;
+public class SimpleLinkedList {
     private Cell first;
     private Cell last;
     private int numberOfElements;
