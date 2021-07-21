@@ -1,23 +1,23 @@
 package ex_the_simpsons;
 import _doubly_linked_list.Cell;
 import _doubly_linked_list.DoublyLinkedList;
-public class Main {
+public class TheSimpsons {
     public static void main(String[] args) {
         DoublyLinkedList myList=new DoublyLinkedList();
         System.out.println("1st operation");
         myList.addEnd("Homer");
         myList.addEnd("Marge");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("2nd operation");
         myList.clean();
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("3rd operation");
         myList.addEnd("Homer");
         myList.addPos(0,"Bart");
         myList.addPos(1,"Moll");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("4th operation");
         myList.clean();
@@ -27,19 +27,19 @@ public class Main {
         myList.addEnd("Homer");
         myList.addEnd("Bart");
         myList.addBeginning("Lisa");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("myList has size "+myList.size());
         System.out.println("\n");
         System.out.println("6th operation");
         myList.clean();
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("7th operation");
         myList.addEnd("Homer");
         myList.addEnd("Maggie");
         myList.addPos(0,"Bart");
         myList.addPos(1,"Marge");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         if(myList.contains("Lisa")) System.out.println("myList contains Lisa");
         else System.out.println("myList doesn't have Lisa");
         System.out.println("\n");
@@ -50,7 +50,7 @@ public class Main {
         System.out.println("9th operation");
         myList.addEnd("Homer");
         myList.addEnd("Bart");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("myList has size "+myList.size());
         System.out.println("\n");
         System.out.println("10th operation");
@@ -71,15 +71,15 @@ public class Main {
         myList.addPos(1,"Maggie");
         myList.addBeginning("Ned Flanders");
         myList.addEnd("Sr. Burns");
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("13th operation");
         myList.removeLast();
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\n");
         System.out.println("14th operation");
         myList.removePos(1);
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\nmyList has size "+myList.size());
         System.out.println("\n");
         System.out.println("15th operation");
@@ -91,7 +91,7 @@ public class Main {
         System.out.println("\n");
         System.out.println("16th operation");
         myList.removeFirst();
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
         System.out.println("\nmyList has size "+myList.size());
         System.out.println("\n");
         System.out.println("17th operation");
@@ -103,10 +103,10 @@ public class Main {
         System.out.println("\n");
         System.out.println("18th operation");
         myList.clean();
-        Main.showList(myList.getCells());
+        TheSimpsons.showList(myList.getCells());
     }
     
-    private static void showList(Cell[] cells){
+    public static void showList(Cell[] cells){
         if(cells==null) System.out.println("Empty list");
         else for(Cell throughCells:cells) System.out.println(throughCells.getData());
         System.out.println();
