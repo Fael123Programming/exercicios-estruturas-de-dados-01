@@ -1,5 +1,5 @@
-package _simple_linked_list;
-public class SimpleLinkedList {
+package _simply_linked_list;
+public class SimplyLinkedList {
     private Cell first;
     private Cell last;
     private int numberOfElements;
@@ -24,7 +24,7 @@ public class SimpleLinkedList {
         if(newElement==null) return;
         Cell newCell=new Cell(newElement,this.first);
         this.first=newCell;
-        if(this.numberOfElements==0) this.last=newCell;
+        if(this.isEmpty()) this.last=newCell;
         this.numberOfElements++;
     }
     
@@ -86,7 +86,9 @@ public class SimpleLinkedList {
     
     public boolean clean(){
         if(this.isEmpty()) return false;
-        while(this.size()>0) this.removeFirst();
+        this.first=null;
+        this.last=null;
+        this.numberOfElements=0;
         return true;
     }
     
@@ -106,5 +108,15 @@ public class SimpleLinkedList {
             allCells[counter]=this.getCell(counter);
         }
         return allCells;
+    }
+    
+    public boolean contains(Object data){
+        if(this.isEmpty()) return false;
+        Cell throughList=this.first;
+        while(throughList!=null){
+            if(throughList.getData().equals(data)) return true;
+            throughList=throughList.getNext();
+        }
+        return false;
     }
 }

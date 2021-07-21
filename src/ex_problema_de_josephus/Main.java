@@ -1,9 +1,9 @@
 package ex_problema_de_josephus;
-import _simple_linked_list.SimpleLinkedList;
+import _simply_linked_list.SimplyLinkedList;
 import java.util.Random;
 public class Main {
     public static void main(String[] args){
-        SimpleLinkedList people=new SimpleLinkedList();
+        SimplyLinkedList people=new SimplyLinkedList();
         //Adding people to my list - they're 20.
         people.addEnd(new Person("Rafael","(64) 99123-3456","Rua das Flores","123.546.234-89",1));//1
         people.addEnd(new Person("Ana","(64) 99312-4589","Rua H","905.123.009-11",2));//2

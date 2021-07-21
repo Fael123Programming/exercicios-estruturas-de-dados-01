@@ -1,4 +1,4 @@
-package _simple_linked_list;
+package _simply_linked_list;
 public class Cell {
     private Object data;
     private Cell next;

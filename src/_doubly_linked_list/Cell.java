@@ -1,4 +1,4 @@
-package _double_linked_list;
+package _doubly_linked_list;
 public class Cell {
     private Cell next;
     private Cell previous;
@@ -11,11 +11,13 @@ public class Cell {
     }
     
     public Cell(Cell next,Object data){
-        this.next=next;
-        this.previous=null;
-        this.data=data;
+        this(next,null,data);
     }
-
+    
+    public Cell(Object data){
+        this(null,null,data);
+    }
+    
     public Cell getNext() {
         return this.next;
     }

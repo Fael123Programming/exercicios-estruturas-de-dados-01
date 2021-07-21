@@ -1,13 +1,13 @@
 package ex_health_center;
-import _simple_linked_list.SimpleLinkedList;
+import _simply_linked_list.SimplyLinkedList;
 public class Main {
     public static void main(String[] args) {
         /* From group 1 to group 10 it'll be attended as people as the group number (55 people afterall).
            After them, from group 11 to 14, the whole group will be attended. Finally, to complete 100
            patients attended in a day, in the last group (15th), only the half will be attended.*/
         GroupOfPatients patients=new GroupOfPatients();//To generate and contain our group of patients.
-        SimpleLinkedList attendedPatients=new SimpleLinkedList();//It'll contain all attendances made during a day.
-        SimpleLinkedList unattendedPatients=new SimpleLinkedList();//Patients that we'll have to ignore, come here.
+        SimplyLinkedList attendedPatients=new SimplyLinkedList();//It'll contain all attendances made during a day.
+        SimplyLinkedList unattendedPatients=new SimplyLinkedList();//Patients that we'll have to ignore, come here.
         byte patientsToAttend=1;  
         while(true){
             patients.generateGroupOfPatients();

@@ -1,12 +1,12 @@
 package ex_health_center;
 import ex_problema_de_josephus.Main;//To use the method generateRandomNumber().
-import _simple_linked_list.SimpleLinkedList;
-import _simple_linked_list.Cell;
+import _simply_linked_list.SimplyLinkedList;
+import _simply_linked_list.Cell;
 public class GroupOfPatients {
-    private SimpleLinkedList groupOfPatients;
+    private SimplyLinkedList groupOfPatients;
     
     public GroupOfPatients(){
-        this.groupOfPatients=new SimpleLinkedList();
+        this.groupOfPatients=new SimplyLinkedList();
     }
     
     public void generateGroupOfPatients(){
@@ -56,7 +56,7 @@ public class GroupOfPatients {
     
     public Cell[] getGroup(){return this.groupOfPatients.getCells();}
     
-    public SimpleLinkedList getListOfPatients(){return this.groupOfPatients;}
+    public SimplyLinkedList getListOfPatients(){return this.groupOfPatients;}
     
     public Patient getHighestPriorityPatient(){
         if(this.groupOfPatients.isEmpty()) return null;
