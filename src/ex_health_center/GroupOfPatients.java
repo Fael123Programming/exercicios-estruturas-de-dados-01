@@ -1,7 +1,9 @@
 package ex_health_center;
+
 import ex_problema_de_josephus.Main;//To use the method generateRandomNumber().
 import _simply_linked_list.SimplyLinkedList;
 import _simply_linked_list.Cell;
+
 public class GroupOfPatients {
     private SimplyLinkedList groupOfPatients;
     
@@ -31,17 +33,8 @@ public class GroupOfPatients {
     
     private int generateNewId(){
         int newId=Main.generateRandomNumber(1000,10000);
-        boolean repeatedId;
         if(this.groupOfPatients.isEmpty()) return newId;
-        for(int counter=0;counter<this.groupOfPatients.size();counter++){
-            repeatedId=((Patient) this.groupOfPatients.getCell(counter).getData()).getId()==newId;
-            if(repeatedId){   
-                while(repeatedId){
-                    newId=Main.generateRandomNumber(1000,10000);
-                }
-                return newId;
-            }
-        }
+        while(this.generatedIdIsRepited(newId)) newId=Main.generateRandomNumber(1000,10000);
         return newId;
     }
     
@@ -74,5 +67,13 @@ public class GroupOfPatients {
                         ((Patient) this.groupOfPatients.getCell(posHighest).getData()).getPriority()) posHighest=counter;
         }
         return posHighest;
+    }
+    
+    private boolean generatedIdIsRepited(int id){
+        if(this.groupOfPatients==null) return false;
+        if(this.groupOfPatients.isEmpty()) return false;
+        Cell[] patients=this.groupOfPatients.getCells();
+        for(Cell throughPatients:patients) if(((Patient)throughPatients.getData()).getId()==id) return true;
+        return false;
     }
 }

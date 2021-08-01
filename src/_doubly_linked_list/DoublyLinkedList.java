@@ -155,6 +155,18 @@ public class DoublyLinkedList {
         return this.getCells(1);
     }
     
+    public Object[] getAllData(int order){
+        if(this.isEmpty()) return null;
+        Cell[] cells=this.getCells(order);
+        Object allData[]=new Object[this.size()];
+        for(int counter=0;counter<allData.length;counter++) allData[counter]=cells[counter].getData();
+        return allData;
+    }
+    
+    public Object[] getAllData(){
+        return this.getAllData(1);
+    }
+    
     public boolean contains(Object data){
         if(this.isEmpty()) return false;
         Cell throughList=this.first;
