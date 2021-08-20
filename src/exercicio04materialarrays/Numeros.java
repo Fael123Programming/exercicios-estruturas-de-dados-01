@@ -6,6 +6,7 @@ public class Numeros {
         Preenche um vetor bidimensional (matriz) com os 10 primeiros
         números naturais e seus respectivos quadrados. Após, mostra todos os
         valores.*/
+        for(byte counter = 0; counter < 100; counter++) System.out.println(Numeros.generate());
         byte numbers[][]= new byte[2][10],counter01=0;
         /*No vetor numbers,a linha 0 irá conter os números naturais de 0 a 9. Já a
         linha 1,conterá seus quadrados.*/
@@ -64,4 +65,6 @@ public class Numeros {
                 break;
         }
     }
+
+    private static int generate(){return (int) (-9999+Math.random()*(19999));}
 }

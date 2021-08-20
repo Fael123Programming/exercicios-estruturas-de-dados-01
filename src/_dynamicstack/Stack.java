@@ -50,16 +50,8 @@ public class Stack {
     }
     
     public boolean clean(){
-        /*if(this.isEmpty()) return false;
-        Node elementToRemove=this.top;
-        while(elementToRemove!=null){
-            this.top=elementToRemove.getPrevious();
-            elementToRemove.setPrevious(null);
-            elementToRemove=this.top;
-        }
-        return true;*/
         if(this.isEmpty()) return false;
-        while(this.pop()) this.pop();
+        this.top = null;
         return true;
     }
 }

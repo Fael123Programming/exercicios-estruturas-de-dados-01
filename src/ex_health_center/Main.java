@@ -1,5 +1,7 @@
 package ex_health_center;
+
 import _simply_linked_list.SimplyLinkedList;
+
 public class Main {
     public static void main(String[] args) {
         /* From group 1 to group 10 it'll be attended as people as the group number (55 people afterall).

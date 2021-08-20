@@ -1,4 +1,5 @@
 package _dynamicstack;
+
 public class Node {
     private int data;
     private Node previous;
