@@ -1,6 +1,8 @@
 package _dynamicqueue;
+
 import java.util.List;
 import java.util.ArrayList;
+
 public class DynamicQueue{
     private List<Object> objects=new ArrayList<>();
     

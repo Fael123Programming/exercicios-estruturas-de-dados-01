@@ -1,9 +1,12 @@
 package _doubly_linked_list;
+
 public class Cell {
     private Cell next;
     private Cell previous;
     private Object data;
-    
+
+    public Cell () {}
+
     public Cell(Cell next,Cell previous,Object data){
         this.next=next;
         this.previous=previous;
@@ -17,7 +20,7 @@ public class Cell {
     public Cell(Object data){
         this(null,null,data);
     }
-    
+
     public Cell getNext() {
         return this.next;
     }
