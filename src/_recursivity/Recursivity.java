@@ -24,5 +24,16 @@ public class Recursivity {
     public static int summationFrom(int number){
         return number<=0?-1:number==1?number:number+Recursivity.summationFrom(number-1);
     }
-    
+
+    //Máximo Divisor Comum entre dois números
+    public static int mdc (int firstNumber, int secondNumber) {
+        if ( firstNumber > secondNumber ) {
+            if ( firstNumber - secondNumber >= 0) return Recursivity.mdc( firstNumber - secondNumber, secondNumber );
+        } else if ( firstNumber < secondNumber ){
+            if ( secondNumber - firstNumber >= 0 ) return Recursivity.mdc ( firstNumber , secondNumber - firstNumber );
+        }
+        return firstNumber;
+    }
+
+    public static int mdcL (int firstNumber , int secondNumber) { return firstNumber > secondNumber && firstNumber - secondNumber >= 0 ? Recursivity.mdc ( firstNumber - secondNumber, secondNumber) : firstNumber < secondNumber && secondNumber - firstNumber >= 0 ? Recursivity.mdc ( firstNumber , secondNumber - firstNumber ) : firstNumber; }
 }
