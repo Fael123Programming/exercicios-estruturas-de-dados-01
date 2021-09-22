@@ -1,7 +1,7 @@
 package ex_fibonacci;
 
 //Fibonacci using only 2 variables to get the result
-public class Main {
+public class Main{
     public static void main(String[] args) {
         System.out.println(Main.fib(10));
     }
