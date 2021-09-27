@@ -2,48 +2,57 @@ package _recursion;
 
 public class Recursion {
 
-    private static int towerOfHanoiMovements=0;
-    
-    private Recursion(){}
-    
-    public static int factorial(int number){
-        return number<0?-1:number==0?1:number* Recursion.factorial(number-1);
+    private static int towerOfHanoiMovements = 0;
+
+    private Recursion() {
     }
-    
-    public static int fibonacci(int position){
-        return position<=0?-1:position==1||position==2?1:fibonacci(position-1)+fibonacci(position-2);
+
+    public static int factorial(int number) {
+        return number < 0 ? -1 : number == 0 ? 1 : number * Recursion.factorial(number - 1);
     }
-    
-    public static void printSequenceFrom(int startingPoint){
-        if(startingPoint<=0){
+
+    public static int fibonacci(int position) {
+        return position < 0 ? -1 : position == 0 || position == 1 ? position : fibonacci(position - 1) + fibonacci(position - 2);
+    }
+
+    public static int fib(int position) {
+        if (position < 0) return -1;
+        if (position == 0 || position == 1) return position;
+        return fib(position - 2) + fib(position - 1);
+    }
+
+    public static void printSequenceFrom(int startingPoint) {
+        if (startingPoint <= 0) {
             System.out.println("");
             return;
         }
-        System.out.print(startingPoint+" ");
-        Recursion.printSequenceFrom(startingPoint-1);
+        System.out.print(startingPoint + " ");
+        Recursion.printSequenceFrom(startingPoint - 1);
     }
-    
-    public static int summationFrom(int number){
-        return number<=0?-1:number==1?number:number+ Recursion.summationFrom(number-1);
+
+    public static int summationFrom(int number) {
+        return number <= 0 ? -1 : number == 1 ? number : number + Recursion.summationFrom(number - 1);
     }
 
     //Máximo Divisor Comum entre dois números using recursion
-    public static int mdc (int firstNumber, int secondNumber) {
-        if ( firstNumber > secondNumber ) {
-            if ( firstNumber - secondNumber >= 0) return Recursion.mdc( firstNumber - secondNumber, secondNumber );
-        } else if ( firstNumber < secondNumber ){
-            if ( secondNumber - firstNumber >= 0 ) return Recursion.mdc ( firstNumber , secondNumber - firstNumber );
+    public static int mdc(int firstNumber, int secondNumber) {
+        if (firstNumber > secondNumber) {
+            if (firstNumber - secondNumber >= 0) return Recursion.mdc(firstNumber - secondNumber, secondNumber);
+        } else if (firstNumber < secondNumber) {
+            if (secondNumber - firstNumber >= 0) return Recursion.mdc(firstNumber, secondNumber - firstNumber);
         }
         return firstNumber;
     }
 
     //Here using recursion and ternary operator
-    public static int mdcT (int firstNumber , int secondNumber) { return firstNumber > secondNumber && firstNumber - secondNumber >= 0 ? Recursion.mdc ( firstNumber - secondNumber, secondNumber) : firstNumber < secondNumber && secondNumber - firstNumber >= 0 ? Recursion.mdc ( firstNumber , secondNumber - firstNumber ) : firstNumber; }
+    public static int mdcT(int firstNumber, int secondNumber) {
+        return firstNumber > secondNumber && firstNumber - secondNumber >= 0 ? Recursion.mdc(firstNumber - secondNumber, secondNumber) : firstNumber < secondNumber && secondNumber - firstNumber >= 0 ? Recursion.mdc(firstNumber, secondNumber - firstNumber) : firstNumber;
+    }
 
     //Here using iterators
     public static int mdcI(int firstNumber, int secondNumber) {
         int rest;
-        if ( firstNumber > secondNumber ) {
+        if (firstNumber > secondNumber) {
             while (secondNumber != 0) {
                 rest = firstNumber % secondNumber;
                 firstNumber = secondNumber;
