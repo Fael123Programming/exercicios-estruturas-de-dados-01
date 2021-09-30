@@ -8,7 +8,7 @@ import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        Set <String> setOfStrings = new HashSet <>();
+        Set <String> setOfStrings = new HashSet <>(); //Faster than TreeSet!
         //Sets are very advisable (because they are very fast) to use for operations of addition, removal and searches for objects.
         //They do not hold their elements in an ordered sequence. As of a mathematical set, what matters is the relation of belonging.
         //When you have only to make searches for objects, use sets.

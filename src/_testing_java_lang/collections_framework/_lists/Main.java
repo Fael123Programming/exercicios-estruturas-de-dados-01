@@ -37,7 +37,7 @@ public class Main {
         for (Object obj : ofNames) {
             cmd.println(obj);
         }
-        LinkedList <Integer> myList = new LinkedList<>();
+        LinkedList <Integer> myList = new LinkedList<>(); //It is slow when accessing elements because does not support random access.
         //The use of a specific type for a list is called 'Generics'.
         //It makes that we do not have to worry about casts anymore when manipulating
         //our elements inside list. In this case, Integer is the generic type!

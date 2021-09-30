@@ -16,6 +16,7 @@ public class House {
     }
 
     public int openDoors() {
+        if(this.totalOfDoorsAdded == 0) return 0;
         int result = 0;
         for (Door dr : this.doors) if (dr.isOpen()) result++;
         return result;
