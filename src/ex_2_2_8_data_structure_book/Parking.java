@@ -1,6 +1,6 @@
 package ex_2_2_8_data_structure_book;
 
-import ex_2_2_8_data_structure_book.dynamic_stack.Stack;
+import _dynamicstack.Stack;
 
 public class Parking {
     private int capacity;

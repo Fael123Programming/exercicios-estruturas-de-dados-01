@@ -20,4 +20,8 @@ public class Main {
         numbers = new LinkedList <>(); //Using the same reference variable to point to different objects allocated on memory.
         System.out.println(numbers);
     }
+
+    public static int pseudoRandom(int a,int b) {
+        return (int) (a + (Math.random() * (b + 1 - a)));
+    }
 }
