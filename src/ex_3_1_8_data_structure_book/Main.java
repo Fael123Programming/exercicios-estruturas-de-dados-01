@@ -15,7 +15,7 @@ import static java.lang.Math.sqrt;
  */
 public class Main {
     public static void main(String[] args) {
-        //System.out.println( Main.fibFormula(7));
+        //System.out.println( FileHandler.fibFormula(7));
         System.out.println("----- Using iterator -----");
         for( byte counter = 0 ; counter <= 10 ; counter ++ ) System.out.println("fib( " + counter + " ) = " + Main.fibI( counter ) );
         System.out.println("\n\n");
