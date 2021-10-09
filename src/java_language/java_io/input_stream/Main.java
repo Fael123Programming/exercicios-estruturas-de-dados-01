@@ -3,6 +3,7 @@ package java_language.java_io.input_stream;
 import java_language.java_io.handy_for_projects.FileHandler;
 
 import java.io.*; //This API provides ways to handle input and output streams of data even files, etc.
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException { //When reading a file, that exception must be treated or rethrown!
@@ -32,7 +33,7 @@ public class Main {
         System.out.println("\n" + FileHandler.readFile("C:/Users/rafae/OneDrive/Documents/PRG/java/JavaParkingManager/ParkingProject.java"));
         //-------------------------------------------------------------------------
         //Now let's change a little piece of code to read Strings from keyboard instead of files.
-        InputStream newInput = System.in; //<- change of reference variable!
+        /*InputStream newInput = System.in; //<- change of reference variable!
         InputStreamReader inputReader = new InputStreamReader(newInput);
         BufferedReader reader = new BufferedReader(inputReader);
         String str = reader.readLine();
@@ -40,6 +41,14 @@ public class Main {
             System.out.println(str);
             str = reader.readLine();
         }
-        reader.close();
+        reader.close();*/
+        System.out.println("----------------------------------------------------------------------------------------------------");
+        Scanner reader = new Scanner(new File("C:/Users/rafae/OneDrive/Documents/PRG/java/exercicios-estruturas-de-dados-01/src/java_language/java_io/texts/captmidn.txt"));
+        while (reader.hasNextLine()) System.out.println(reader.nextLine());
+// An easy way to cast from a number type to a string is using concatenation!
+        double aprox = 3.1111;
+        int year = 1222;
+        String str = aprox + "" + year; //There are casts being made right here!
+        System.out.println(str + " has " + str.length() + " characters.");
     }
 }
