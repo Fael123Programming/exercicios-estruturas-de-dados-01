@@ -13,7 +13,6 @@ public class Main {
             //'finally' statement is already included!
             while (input.hasNextLine()) {
                 filePrinter.println(input.nextLine());
-
             }
         }catch (IOException e) {
             System.out.println("An error occurred!");
