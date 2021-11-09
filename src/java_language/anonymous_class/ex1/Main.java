@@ -1,4 +1,4 @@
-package java_language.anonymous_class;
+package java_language.anonymous_class.ex1;
 
 import java.util.*;
 
@@ -11,18 +11,9 @@ public class Main {
         strings.addFirst("Closely related to algorithms");
         System.out.println(strings);
         System.out.println("----------------------------------------------");
-        strings.sort(new Comparator<String>() { //This way we are creating an anonymous class that implements the interface Comparator.
-            @Override
-            public int compare(String str1, String str2) {
-                return Integer.compare(str1.length(), str2.length());
-            }
-        });
-        Comparator<String> comp = new Comparator<>(){
-            @Override
-            public int compare(String str1,String str2) {
-                return Integer.compare(str1.length(),str2.length());
-            }
-        };
+        //This way we are creating an anonymous class that implements the interface Comparator.
+        strings.sort(Comparator.comparingInt(String::length));
+        Comparator<String> comp = Comparator.comparingInt(String::length);
         Comparator<String> comp2 = (str1,str2) -> Integer.compare(str2.length(),str1.length());
         System.out.println("----------------------------------------------");
         System.out.println(strings);
@@ -33,7 +24,7 @@ public class Main {
         System.out.println(strings);
         System.out.println("----------------------------------------------");
         System.out.println("Using a lambda expression called foreach");
-        strings.forEach(s -> System.out.println(s)); //Functional interface called Consumer.
+        strings.forEach(System.out::println); //Functional interface called Consumer.
         System.out.println("----------------------------------------------");
         strings.forEach(System.out::println); //Enhanced way to print the elements of 'strings'.
         System.out.println("----------------------------------------------");
@@ -42,6 +33,11 @@ public class Main {
         System.out.println(strings);
         new Thread(()-> System.out.println("New thread running...")).start();
         //Lambda expression over interface Runnable.
-
+        Runnable runnable = () -> {
+            System.out.println("This is an anonymous class being created and implementing the interface Runnable...");
+            System.out.println("This anonymous class has only one instance at all...");
+        };
+        Thread t = new Thread(runnable);
+        t.start();
     }
 }
