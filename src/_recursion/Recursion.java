@@ -49,7 +49,7 @@ public class Recursion {
         return firstNumber > secondNumber && firstNumber - secondNumber >= 0 ? Recursion.mdc(firstNumber - secondNumber, secondNumber) : firstNumber < secondNumber && secondNumber - firstNumber >= 0 ? Recursion.mdc(firstNumber, secondNumber - firstNumber) : firstNumber;
     }
 
-    //Here using iterators
+    //Here using loops.
     public static int mdcI(int firstNumber, int secondNumber) {
         int rest;
         if (firstNumber > secondNumber) {
