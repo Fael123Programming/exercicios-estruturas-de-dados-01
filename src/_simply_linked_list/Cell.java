@@ -1,11 +1,12 @@
 package _simply_linked_list;
+
 public class Cell {
     private Object data;
     private Cell next;
-    
-    public Cell(Object data,Cell next){
-        this.data=data;
-        this.next=next;
+
+    public Cell(Object data, Cell next) {
+        this.data = data;
+        this.next = next;
     }
 
     public Object getData() {
