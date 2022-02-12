@@ -1,28 +1,33 @@
-package _dynamicstack;
+package _dynamicstack.exercise;
+
+import _dynamicstack.structureclasses.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        Stack even = new Stack();
-        Stack odd = new Stack();
+        Stack<Integer> even = new Stack<>();
+        Stack<Integer> odd = new Stack<>();
         int randomNumber = Main.generateNumber(-127, 128);
-        while (randomNumber != 0) {//Pegando números e colocando-os dentro da pilha específica.
-            if (randomNumber % 2 == 0) even.push(randomNumber);
-            else odd.push(randomNumber);
+        while (randomNumber != 0) { //Pegando números e colocando-os dentro da pilha específica.
+            if (randomNumber % 2 == 0)
+                even.push(randomNumber);
+            else
+                odd.push(randomNumber);
             randomNumber = Main.generateNumber(-127, 128);
         }
-        if (even.isEmpty() || odd.isEmpty()) System.exit(0);
+        if (even.isEmpty() || odd.isEmpty())
+            System.exit(0);
         System.out.println("Dados na pilha de números ímpares:\n");
         Main.showDataOfElements(odd.getElements());
         System.out.println("\n\nDados na pilha de números pares:\n");
         Main.showDataOfElements(even.getElements());
-        while (true) {
-            System.out.printf("\n\nRetirando %d da pilha de números ímpares.\n", odd.top().getData());
+        while (!odd.isEmpty() && !even.isEmpty()) {
+            System.out.printf("\n\nRetirando %d da pilha de números ímpares.\n", odd.top());
             odd.pop();
-            System.out.printf("Retirando %d da pilha de números pares.", even.top().getData());
+            System.out.printf("Retirando %d da pilha de números pares.", even.top());
             even.pop();
-            if (odd.isEmpty() || even.isEmpty()) break;
         }
-        if (odd.isEmpty() && even.isEmpty()) System.exit(0);
+        if (odd.isEmpty() && even.isEmpty())
+            System.exit(0);
         if (odd.isEmpty()) {
             System.out.printf("\n\nPilha de números pares ainda possui %d elemento(s)\nSao eles:\n", even.size());
             Main.showDataOfElements(even.getElements());
@@ -32,11 +37,14 @@ public class Main {
         }
     }
 
-    public static void showDataOfElements(Node[] elements) {
-        if (elements == null) return;
+    public static void showDataOfElements(Object[] elements) {
+        if (elements == null)
+            return;
         for (int counter = 0; counter < elements.length; counter++) {
-            if (counter == 0) System.out.printf("[TOP]: %d\n", elements[counter].getData());
-            else System.out.printf("[TOP-%d]: %d\n", counter, elements[counter].getData());
+            if (counter == 0)
+                System.out.println("[TOP]: " + elements[counter]);
+            else
+                System.out.println("[TOP-" + counter + "]: " + elements[counter]);
         }
     }
 
